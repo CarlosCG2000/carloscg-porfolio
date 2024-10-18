@@ -13,6 +13,7 @@ import NpmIcon from "../icons/Npm.astro";
 import ViteIcon from "../icons/Vite.astro";
 import JsIcon from "../icons/Js.astro";
 import TsIcon from "../icons/Ts.astro";
+import MicroIcon from "../icons/MicroPlatform.astro";
 
 const TAGS = {
   NEXT: {
@@ -70,6 +71,11 @@ const TAGS = {
     class: "bg-[#0049ae] text-white",
     icon: TsIcon,
   },
+  MICRO_PLATFORM: {
+    name: "Microsoft Platform",
+    class: "bg-[#ab0768] text-white",
+    icon: MicroIcon,
+  },
 };
 
 const PROJECTS = [
@@ -109,9 +115,7 @@ const PROJECTS = [
     link: "",
     github: "https://github.com/CarlosCG2000/huercasa-complex",
     image: "projects/powerapp.webp",
-    tags: [
-      /*TAGS.POWERAPP, TAGS.POWERAUTOMATE, TAGS.DATAVERSE*/
-    ],
+    tags: [TAGS.MICRO_PLATFORM],
     alt: "Captura de una de unas de las pantallas de la interfaz del proyecto",
   },
   {
