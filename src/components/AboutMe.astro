@@ -1,0 +1,41 @@
+---
+const personalImageAlt = "Carlos Caño";
+---
+
+<article
+  class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row"
+>
+  <div
+    class="[&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
+  >
+    <p>
+      ¡Soy Carlos! Estudié ingeniería infórmatica y, de forma autodidacta, me
+      especialice en el desarrollo web. Desde entonces disfruto creando
+      experiencias web para los usuarios. <strong>
+        Actualmente estoy estudiando un máster académico de aplicaciones móviles</strong
+      >.
+    </p>
+
+    <p>
+      Mis intereses principales se basan en la lectura de artículos de carácter
+      de actualidad tecnológica relacionados con la <strong>
+        inteligencia artificial, aplicaciones web y móviles
+      </strong>.
+    </p>
+
+    <p>
+      Me sigo formando en temas de lenguaje de programación y frameworks a
+      través de <strong> Youtube, Udemy, Coursera, etc. </strong>
+      <!-- <em class="italic">youtube, udemy, coursera, </em> -->
+    </p>
+  </div>
+
+  <img
+    width="200"
+    height="200"
+    src="mi-foto.webp"
+    alt={personalImageAlt}
+    class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20"
+    style="object-position: 50% 30%"
+  />
+</article>

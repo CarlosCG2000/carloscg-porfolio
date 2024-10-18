@@ -1,0 +1,184 @@
+---
+import GitHubIcon from "../icons/GitHub.astro";
+import NextJSIcon from "../icons/NextJS.astro";
+import TailwindIcon from "../icons/Tailwind.astro";
+import Link from "../icons/Link.astro";
+import LinkButton from "./LinkButton.astro";
+import ReactIcon from "../icons/React.astro";
+import AngularIcon from "../icons/Angular.astro";
+import NodeIcon from "../icons/Node.astro";
+import MongoIcon from "../icons/Mongo.astro";
+import FirebaseIcon from "../icons/Firebase.astro";
+import NpmIcon from "../icons/Npm.astro";
+import ViteIcon from "../icons/Vite.astro";
+import JsIcon from "../icons/Js.astro";
+import TsIcon from "../icons/Ts.astro";
+
+const TAGS = {
+  NEXT: {
+    name: "Next.js",
+    class: "bg-black text-white",
+    icon: NextJSIcon,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: TailwindIcon,
+  },
+  REACT: {
+    name: "React",
+    class: "bg-[#003f66] text-white",
+    icon: ReactIcon,
+  },
+  ANGULAR: {
+    name: "Angular",
+    class: "bg-[#522f52] text-white",
+    icon: AngularIcon,
+  },
+  NODE: {
+    name: "NodeJS",
+    class: "bg-[#3a4d38] text-white",
+    icon: NodeIcon,
+  },
+  MONGODB: {
+    name: "MongoDB",
+    class: "bg-[#00bd51] text-black",
+    icon: MongoIcon,
+  },
+  FIREBASE: {
+    name: "Firebase",
+    class: "bg-[#c96a2b] text-white",
+    icon: FirebaseIcon,
+  },
+  NPM: {
+    name: "npm",
+    class: "bg-[#930032] text-white",
+    icon: NpmIcon,
+  },
+  VITE: {
+    name: "Vite",
+    class: "bg-[#e8ffff] text-black",
+    icon: ViteIcon,
+  },
+  JS: {
+    name: "JavaScript",
+    class: "bg-[#efca6a] text-black",
+    icon: JsIcon,
+  },
+  TS: {
+    name: "TypeScript",
+    class: "bg-[#0049ae] text-white",
+    icon: TsIcon,
+  },
+};
+
+const PROJECTS = [
+  {
+    title: "Aplicación completa para la gestión de proyectos COIL'S",
+    description:
+      "Trabajo final de grado. Aplicación web para la gestión de datos de proyectos de COIL (proyectos entre varias entidades de diferentes paises) con la capacidad de gestionar todo tipo de usuarios, proyectos, etc.",
+    link: "",
+    github: "https://github.com/CarlosCG2000/gestion-coils-front",
+    image: "projects/tfg-coil.webp",
+    tags: [TAGS.TS, TAGS.ANGULAR, TAGS.NODE, TAGS.MONGODB, TAGS.FIREBASE],
+    alt: "Captura de una de las pantallas de la aplicación de proyectos COIL",
+  },
+  {
+    title: "Juego Tres en Raya",
+    description:
+      "Juego para dos personas del clásico tres en raya con almacenamiento en el Local Storage para guardar la partida actual.",
+    link: "https://juego-3-en-raya.netlify.app/",
+    github: "https://github.com/CarlosCG2000/juego-tres-en-raya",
+    image: "projects/2-tres-en-raya.webp",
+    tags: [TAGS.JS, TAGS.REACT, TAGS.VITE],
+    alt: "Captura de la interfaz del proyecto de tarjetas de seguidores estilo X (Twitter)",
+  },
+  {
+    title: "Etiquetas de seguidores estilo X (Twitter)",
+    description:
+      "Trata de crear tarjetas de usuario de X (Twitter) con la capacidad de seguir a otros usuarios de forma estática.",
+    link: "https://storied-biscotti-b0f4c3.netlify.app/",
+    github: "https://github.com/CarlosCG2000/tarjeta-usuarios-x-twitter",
+    image: "projects/1-tarjeta-x.webp",
+    tags: [TAGS.JS, TAGS.REACT, TAGS.VITE],
+    alt: "Captura de la interfaz del proyecto de tarjetas de seguidores estilo X (Twitter)",
+  },
+  {
+    title: "Sistema de registro de producción Complex",
+    description: "Proyecto de Complex en Rumania para Huercasa (agricola).",
+    link: "",
+    github: "https://github.com/CarlosCG2000/huercasa-complex",
+    image: "projects/powerapp.webp",
+    tags: [
+      /*TAGS.POWERAPP, TAGS.POWERAUTOMATE, TAGS.DATAVERSE*/
+    ],
+    alt: "Captura de una de unas de las pantallas de la interfaz del proyecto",
+  },
+  {
+    title: "Librería de enrutamiento en React",
+    description:
+      "Publicación de una libreria en NPM. Un proyecto desarrollado desde 0, donde creo un enrutamiento de navegación estilo React Router.",
+    link: "https://www.npmjs.com/package/07-navegation-router?activeTab=code",
+    image: "/projects/7-rutas.webp",
+    tags: [TAGS.JS, TAGS.REACT, TAGS.VITE, TAGS.NPM],
+    alt: "Captura de la pagina de NPM donde tengo publicada la libreria",
+  },
+];
+---
+
+<div class="flex flex-col gap-y-16">
+  {
+    PROJECTS.map(({ image, title, description, tags, alt, link, github }) => (
+      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+        <div class="w-full md:w-1/2">
+          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+            <img
+              alt={alt}
+              class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+              loading="lazy"
+              src={image}
+            />
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2 md:max-w-lg">
+          <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+            {title}
+          </h3>
+          <div class="flex flex-wrap mt-2">
+            <ul class="flex flex-row mb-2 gap-x-2">
+              {tags.map((tag) => (
+                <li>
+                  <span
+                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                  >
+                    <tag.icon class="size-4" />
+                    {tag.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <div class="mt-2 text-gray-700 dark:text-gray-400">
+              {description}
+            </div>
+            <footer class="flex items-end justify-start mt-4 gap-x-4">
+              {github && (
+                <LinkButton href={github}>
+                  <GitHubIcon class="size-6" />
+                  Code
+                </LinkButton>
+              )}
+              {link && (
+                <LinkButton href={link}>
+                  <Link class="size-4" />
+                  Preview
+                </LinkButton>
+              )}
+            </footer>
+          </div>
+        </div>
+      </article>
+    ))
+  }
+</div>

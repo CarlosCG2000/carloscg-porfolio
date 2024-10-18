@@ -1,0 +1,80 @@
+---
+const personalImageAlt = "Foto personal de Carlos Caño";
+import Badge from "../components/Badge.astro";
+import GitHubIcon from "../icons/GitHub.astro";
+import LinkedInIcon from "../icons/LinkedIn.astro";
+import MailIcon from "../icons/Mail.astro";
+import InstagramIcon from "../icons/Instagram.astro";
+import DiscordIcon from "../icons/Discord.astro";
+import SocialPill from "../components/SocialPill.astro";
+---
+
+<div class="max-w-3xl">
+  <div class="flex gap-4 mb-4">
+    <img
+      class="rounded-full shadow-lg width-20 h-20"
+      src="/mi-foto-perfil.jpeg"
+      alt={personalImageAlt}
+    />
+    <a
+      href="https://www.linkedin.com/in/carlos-cano-gomez-655463141/"
+      target="_blank"
+      rel="noopener"
+      class="flex items-center transition md:justify-center md:hover:scale-105"
+    >
+      <Badge>Disponible para trabajar</Badge>
+    </a>
+  </div>
+  <h1
+    class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
+  >
+    ¡Hola soy Carlos Caño! 👋
+  </h1>
+  <p
+    class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-orange-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
+  >
+    <span style="color: rgb(212, 178, 136);">
+      Cursando actualmente un máster universitario de informática móvil (MIMO).
+    </span>
+    <strong style="color: rgb(136, 160, 212);">
+      Graduado en ingeniería informática en mención del software en la UPSA.
+    </strong>
+    <span style="color: rgba(177, 160, 211, 0.85);"
+      >De Salamanca, España.
+    </span>
+  </p>
+  <nav class="flex flex-wrap gap-4 mt-8">
+    <div class="flex">
+      <SocialPill
+        href="https://www.linkedin.com/in/carlos-cano-gomez-655463141/"
+      >
+        <LinkedInIcon class="size-6 md:size-6" />
+        LinkedIn
+      </SocialPill>
+    </div>
+    <div class="flex">
+      <SocialPill href="https://github.com/CarlosCG2000">
+        <GitHubIcon class="size-6 md:size-6" />
+        GitHub
+      </SocialPill>
+    </div>
+    <div class="flex">
+      <SocialPill href="https://discordapp.com/users/1283082190938439776">
+        <DiscordIcon class="size-6 md:size-6" />
+        Discord
+      </SocialPill>
+    </div>
+    <div class="flex">
+      <SocialPill href="https://instagram.com/carloscg_00/profilecard/">
+        <InstagramIcon class="size-6 md:size-6" />
+        Instagram
+      </SocialPill>
+    </div>
+    <div class="flex">
+      <SocialPill href="mailto:canogomezcarlos@gmail.com">
+        <MailIcon class="size-6 md:size-6" />
+        Contacto
+      </SocialPill>
+    </div>
+  </nav>
+</div>

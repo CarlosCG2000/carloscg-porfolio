@@ -1,0 +1,60 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE = [
+  {
+    date: "Febrero 2024 - Junio 2024",
+    title: "Prácticas Académicas",
+    company: "DominaTech",
+    description:
+      "Experiencia en Microsoft Power Platform, incluyendo un profundo conocimiento de sus funcionalidades y la capacidad de crear aplicaciones personalizadas con Power Apps. Destacan habilidades en la gestión de datos en Dataverse, la automatización de procesos con Power Automate, el desarrollo de aplicaciones y la resolución de problemas técnicos. Realice un total de 498 horas.",
+  },
+  {
+    date: "Febrero 2024",
+    title: "Curso React.js",
+    company: "MiduDev",
+    description: "Curso para aprender React basado en proyectos prácticos.",
+    link: "https://cursoreact.dev/",
+  },
+  {
+    date: "Octubre 2023",
+    title: "IV edición de hack4edu",
+    company: "ProFuturo - Fundación Telefónica",
+    description:
+      "Es una convocatoria multidisciplinar, de ámbito internacional y con un formato híbrido, que busca planteamiento y resolución de retos tecnológicos relacionados con los desafíos que plantea la educación digital.",
+    link: "https://profuturo.education/hack4edu/",
+  },
+  {
+    date: "Marzo 2023",
+    title: "V Jornadas de Ciberseguridad",
+    company: "Universidad Pontificia De Salamanca",
+    description:
+      "Objetivo: en estas jornadas expertos en seguridad nos mostrarán la realidad actual en este campo. Ponentes: D. Manuel J. Silos, Excmo. D. Félix Sanz Roldán, D. Luis Enrique Corredera de Colsa.",
+  },
+  {
+    date: "Febrero 2023",
+    title: "Impresión en 3D, corte y grabado láser",
+    company: "UPSA Maker Space",
+    description:
+      "Aprender los conceptos básicos para imprimir en 3D y los pasos necesarios para manejar las impresoras 3D y cortar y grabar mediante Láser.",
+  },
+  {
+    date: "Septiembre 2022",
+    title: "Python 3 de la A a la Z ",
+    company: "Frogames Support Team",
+    description:
+      "Entender conceptos avanzados como los decoradores, a utilizar todos los conceptos de Programación Orientada a Objetos con clases, módulos de tratamiento de ficheros o los formatos de timestamps. Dominar todas las librerías necesarias para luego cursar ML o IA con éxito, incluidas pandas, numpy, math, cmath, matplotlib, seaborn, csv, os.",
+    link: "https://www.udemy.com/course/python-3-az/",
+  },
+];
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
