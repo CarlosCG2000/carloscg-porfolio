@@ -14,6 +14,8 @@ import ViteIcon from "../icons/Vite.astro";
 import JsIcon from "../icons/Js.astro";
 import TsIcon from "../icons/Ts.astro";
 import MicroIcon from "../icons/MicroPlatform.astro";
+import LocalStorage from "../icons/LocalStorage.astro";
+import Ionic from "../icons/Ionic.astro";
 
 const TAGS = {
   NEXT: {
@@ -76,9 +78,29 @@ const TAGS = {
     class: "bg-[#ab0768] text-white",
     icon: MicroIcon,
   },
+  LOCAL_STORAGE: {
+    name: "Local",
+    class: "bg-[#ab0768] text-white",
+    icon: LocalStorage,
+  },
+  IONIC: {
+    name: "Ionic",
+    class: "bg-[#05d9cd] text-black",
+    icon: Ionic,
+  },
 };
 
 const PROJECTS = [
+  {
+    title: "Aplicación para gestionar recetas a través de una API",
+    description:
+      "Es una aplicación web donde vas a poder visualizar recetas de comida de la Api de themealdb.com, además de poder buscar recetas por nombre, categoría, ect. Aparte podrás añadir a favoritos tus recetas preferidas, añadir tips a dichas rectas, crear tus propias recetas, modificarlas luego, etc.",
+    link: "https://recetas-mimo.netlify.app/#/listado-recetas",
+    github: "https://github.com/CarlosCG2000/recetas-mimo",
+    image: "projects/14-receta.webp",
+    tags: [TAGS.TS, TAGS.ANGULAR, TAGS.IONIC, TAGS.LOCAL_STORAGE],
+    alt: "Captura de una de las pantallas de la aplicación de proyectos COIL",
+  },
   {
     title: "Aplicación completa para la gestión de proyectos COIL'S",
     description:
