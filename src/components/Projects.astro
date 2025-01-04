@@ -16,6 +16,8 @@ import TsIcon from "../icons/Ts.astro";
 import MicroIcon from "../icons/MicroPlatform.astro";
 import LocalStorage from "../icons/LocalStorage.astro";
 import Ionic from "../icons/Ionic.astro";
+import Swift from "../icons/Swift.astro";
+import iOS from "../icons/iOS.astro";
 
 const TAGS = {
   NEXT: {
@@ -88,16 +90,26 @@ const TAGS = {
     class: "bg-[#05d9cd] text-black",
     icon: Ionic,
   },
+  SWIFT: {
+    name: "Swift",
+    class: "bg-[#e63d19] text-white",
+    icon: Swift,
+  },
+  iOS: {
+    name: "iOS",
+    class: "bg-[#000000] text-white",
+    icon: iOS,
+  },
 };
 
 const PROJECTS = [
   {
-    title: "3 aplicaciones en 1 en iOS a partir de SwiftUI",
+    title: "3 en 1 App para dispositivos iOS",
     description:
-      "Menú de tres aplicaciones en una sola aplicación de iOS. Todo ello con SwiftU: \n1_Calcular el IMC de una persona. \n2_Visualizar un listado de superhéroes a traves de una API externa y poder ver en detalles su información. \n3_A través del mapa de Apple tus lugares favoritos, poder guardarlos y visualizarlos a través de un desplegable (cuando se pulse te redirigira a su dirección). Todo ello con persistencia de datos en UserDefaults.",
+      "Menú de tres aplicaciones en una sola aplicación de iOS. Todo ello con SwiftU. La primera sirve para calcular el IMC de una persona. La segunda permite visualizar un listado de superhéroes a través de una API externa (https://superheroapi.com/) y poder ver en detalles su información. Por último una app donde a través del mapa de Apple mostrará tus lugares favoritos, los cuales los puedes guardar (de forma persistente con UserDefaults) y visualizar a través de un desplegable - cuando se pulse a uno de ellos te redirigira a su dirección.",
     github: "https://github.com/CarlosCG2000/Curso_iOS",
     image: "projects/15_app-x3-ios.webp",
-    tags: [],
+    tags: [TAGS.SWIFT, TAGS.iOS],
     alt: "Captura de una de las pantalla de la aplicación de iOS con 3 aplicaciones en 1",
   },
   {
