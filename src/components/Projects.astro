@@ -106,7 +106,7 @@ const PROJECTS = [
   {
     title: "3 en 1 App para dispositivos iOS",
     description:
-      "Menú de tres aplicaciones en una sola aplicación de iOS. Todo ello con SwiftUI. La primera sirve para calcular el IMC de una persona. La segunda permite visualizar un listado de superhéroes a través de una API externa (https://superheroapi.com/) y poder ver en detalles su información. Por último una app donde a través del mapa de Apple mostrará tus lugares favoritos, los cuales los puedes guardar de forma persistente con UserDefaults y visualizar a través de un desplegable - cuando se pulse a uno de ellos te redirigira a su dirección.",
+      "Menú de tres aplicaciones en una sola aplicación. 1º: sirve para calcular el IMC del usuario. 2º: permite visualizar un listado de superhéroes a través de una API externa (https://superheroapi.com/) ver sus detalles. 3º: a través del mapa de Apple mostrará tus lugares favoritos, los cuales los puedes guardar con UserDefaults y visualizar y redirigirse a su ubicación a través de un desplegable.",
     github: "https://github.com/CarlosCG2000/Curso_iOS",
     image: "projects/15_app-x3-ios.webp",
     tags: [TAGS.SWIFT, TAGS.iOS],
@@ -133,6 +133,15 @@ const PROJECTS = [
     alt: "Captura de una de las pantallas de la aplicación de proyectos COIL",
   },
   {
+    title: "Sistema de registro de producción Complex",
+    description: "Proyecto de Complex en Rumania para Huercasa (agricola).",
+    link: "",
+    github: "https://github.com/CarlosCG2000/huercasa-complex",
+    image: "projects/powerapp.webp",
+    tags: [TAGS.MICRO_PLATFORM],
+    alt: "Captura de una de unas de las pantallas de la interfaz del proyecto",
+  },
+  {
     title: "Prueba Técnica Junior",
     description:
       "Crea una aplicación para buscar películas, evitando que se haga una misma búqueda dos veces y que la búsqueda se haga automáticamente al escribir pero con debounce.",
@@ -143,14 +152,54 @@ const PROJECTS = [
     alt: "Captura de la prueba técnica para el puesto de Junior",
   },
   {
-    title: "Juego Tres en Raya",
+    title: "Clon de Google Translate con ChatGPT",
     description:
-      "Juego para dos personas del clásico tres en raya con almacenamiento en el Local Storage para guardar la partida actual.",
-    link: "https://juego-3-en-raya.netlify.app/",
-    github: "https://github.com/CarlosCG2000/juego-tres-en-raya",
-    image: "projects/2-tres-en-raya.webp",
-    tags: [TAGS.JS, TAGS.REACT, TAGS.VITE],
-    alt: "Captura de la interfaz del proyecto de tarjetas de seguidores estilo X (Twitter)",
+      "Divido en el front y el back (que es donde tengo la API-key de OpenAI). Uso ChatGPT para crear un traductor de texto con un estilo parecido a Google Translate.",
+    link: "",
+    github: "https://github.com/CarlosCG2000/Mi-Clon-Google-Translate",
+    image: "projects/09-google-traductor.webp",
+    tags: [TAGS.TS, TAGS.REACT, TAGS.VITE],
+    alt: "Captura de mi propio Google Translate con ChatGPT",
+  },
+  {
+    title: "TodoMVC App",
+    description:
+      "Listar, añadir, borrar, completar y filtrar los TODOs, añadir estilos del TodoMVC, animaciones con AutoAnimate, etc.",
+    link: "https://todos-lista.netlify.app",
+    github: "https://github.com/CarlosCG2000/TodoMVC-App",
+    image: "projects/8-todo-app.webp",
+    tags: [TAGS.TS, TAGS.REACT, TAGS.VITE],
+    alt: "Captura de TodoMVC App",
+  },
+  {
+    title: "Librería de enrutamiento en React",
+    description:
+      "Publicación de una libreria en NPM. Un proyecto desarrollado desde 0, donde creo un enrutamiento de navegación estilo React Router.",
+    link: "https://www.npmjs.com/package/07-navegation-router?activeTab=code",
+    github: "",
+    image: "/projects/7-rutas.webp",
+    tags: [TAGS.JS, TAGS.REACT, TAGS.VITE, TAGS.NPM],
+    alt: "Captura de la pagina de NPM donde tengo publicada la libreria",
+  },
+  {
+    title: "CRUD con Redux Toolkit",
+    description:
+      "El estilo de aplicación más típico solucionado usando un estado global con Redux Toolkit",
+    link: "",
+    github: "https://github.com/CarlosCG2000/App-CRUD-Redux",
+    image: "projects/10-crud-redux.webp",
+    tags: [TAGS.TS, TAGS.REACT, TAGS.VITE],
+    alt: "Captura de una la pantalla de CRUD con Redux Toolkit y TypeScript",
+  },
+  {
+    title: "Prueba Técnica Trainee",
+    description:
+      "Muestra una lista de productos que vienen de un JSON, con filtros y useContext para evitar pasar props innecesarias. En el carrito se pueden añadir, eliminar, actualizar la cantidad de productos y todo esto se guarda en el Local Storage.",
+    link: "https://prueba-tecnica-trainee-2.netlify.app",
+    github: "https://github.com/CarlosCG2000/Prueba-tecnica-trainee-2",
+    image: "projects/6-prueba-junior-compra.webp",
+    tags: [TAGS.JS, TAGS.REACT, TAGS.VITE, TAGS.LOCAL_STORAGE],
+    alt: "Captura de la prueba técnica para el puesto de Trainee",
   },
   {
     title: "Prueba Técnica Trainee-Junior",
@@ -163,44 +212,35 @@ const PROJECTS = [
     alt: "Captura de la prueba técnica para el puesto de Trainee-Junior",
   },
   {
-    title: "Etiquetas de seguidores estilo X (Twitter)",
+    title: "Juego Tres en Raya",
     description:
-      "Trata de crear tarjetas de usuario de X (Twitter) con la capacidad de seguir a otros usuarios de forma estática.",
-    link: "https://tarjetas-x-twitter.netlify.app",
-    github: "https://github.com/CarlosCG2000/tarjeta-usuarios-x-twitter",
-    image: "projects/1-tarjeta-x.webp",
+      "Juego para dos personas del clásico tres en raya con almacenamiento en el Local Storage para guardar la partida actual.",
+    link: "https://juego-3-en-raya.netlify.app/",
+    github: "https://github.com/CarlosCG2000/juego-tres-en-raya",
+    image: "projects/2-tres-en-raya.webp",
     tags: [TAGS.JS, TAGS.REACT, TAGS.VITE],
     alt: "Captura de la interfaz del proyecto de tarjetas de seguidores estilo X (Twitter)",
   },
-  {
-    title: "Sistema de registro de producción Complex",
-    description: "Proyecto de Complex en Rumania para Huercasa (agricola).",
-    link: "",
-    github: "https://github.com/CarlosCG2000/huercasa-complex",
-    image: "projects/powerapp.webp",
-    tags: [TAGS.MICRO_PLATFORM],
-    alt: "Captura de una de unas de las pantallas de la interfaz del proyecto",
-  },
-  {
-    title: "Puntero de ratón seguidor",
-    description:
-      "Creación de una app para seguir el puntero. Es un proyecto en el que pueda seguir el puntero (con el efecto de una bolita) con una animación y además poder activar y desactivar, etcétera.  ",
-    link: "https://puntero-marcador.netlify.app",
-    github: "https://github.com/CarlosCG2000/puntero-marcador",
-    image: "/projects/3-puntero.webp",
-    tags: [TAGS.JS, TAGS.REACT, TAGS.VITE],
-    alt: "Captura de la interfaz del puntero de ratón seguidor",
-  },
-  {
-    title: "Librería de enrutamiento en React",
-    description:
-      "Publicación de una libreria en NPM. Un proyecto desarrollado desde 0, donde creo un enrutamiento de navegación estilo React Router.",
-    link: "https://www.npmjs.com/package/07-navegation-router?activeTab=code",
-    github: "",
-    image: "/projects/7-rutas.webp",
-    tags: [TAGS.JS, TAGS.REACT, TAGS.VITE, TAGS.NPM],
-    alt: "Captura de la pagina de NPM donde tengo publicada la libreria",
-  },
+  // {
+  //   title: "Etiquetas de seguidores estilo X (Twitter)",
+  //   description:
+  //     "Trata de crear tarjetas de usuario de X (Twitter) con la capacidad de seguir a otros usuarios de forma estática.",
+  //   link: "https://tarjetas-x-twitter.netlify.app",
+  //   github: "https://github.com/CarlosCG2000/tarjeta-usuarios-x-twitter",
+  //   image: "projects/1-tarjeta-x.webp",
+  //   tags: [TAGS.JS, TAGS.REACT, TAGS.VITE],
+  //   alt: "Captura de la interfaz del proyecto de tarjetas de seguidores estilo X (Twitter)",
+  // },
+  // {
+  //   title: "Puntero de ratón seguidor",
+  //   description:
+  //     "Creación de una app para seguir el puntero. Es un proyecto en el que pueda seguir el puntero (con el efecto de una bolita) con una animación y además poder activar y desactivar, etcétera.  ",
+  //   link: "https://puntero-marcador.netlify.app",
+  //   github: "https://github.com/CarlosCG2000/puntero-marcador",
+  //   image: "/projects/3-puntero.webp",
+  //   tags: [TAGS.JS, TAGS.REACT, TAGS.VITE],
+  //   alt: "Captura de la interfaz del puntero de ratón seguidor",
+  // },
 ];
 ---
 
