@@ -23,6 +23,9 @@ const { description, title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<ViewTransitions />
+		<script>
+			document.documentElement.classList.add("dark"); // Activar el modo oscuro por defecto
+		</script>
 	</head>
 
 	<body class="relative text-black dark:text-white">
