@@ -18,6 +18,8 @@ import LocalStorage from "../icons/LocalStorage.astro";
 import Ionic from "../icons/Ionic.astro";
 import Swift from "../icons/Swift.astro";
 import iOS from "../icons/iOS.astro";
+import Kotlin from "../icons/Kotlin.astro";
+import Android from "../icons/Android.astro";
 
 const TAGS = {
   NEXT: {
@@ -100,13 +102,33 @@ const TAGS = {
     class: "bg-[#000000] text-white",
     icon: iOS,
   },
+  KOTLIN: {
+    name: "Kotlin",
+    class: "bg-[#6c0f4e] text-white",
+    icon: Kotlin,
+  },
+  ANDROID: {
+    name: "Android",
+    class: "bg-[#05a22f] text-white",
+    icon: Android,
+  },
 };
 
 const PROJECTS = [
   {
-    title: "App de los Simpsons",
+    title: "App de Los Simpsons",
     description:
-      "Desarrollada en Swift 6 con SwiftUI, basada en la arquitectura MVVM siguiendo los principios de Clean Architecture, llamadas tanto a mocks de datos en JSON como a APIs utilizando URLSession, implementa persistencia de datos con SwiftData y UserDefaults, uso de protocolos, incorpora dependencias para animaciones (Lottie) y pruebas Snapshot a través de Swift Package Manager, ofrece soporte multilingüe mediante el archivo Localizable, con versiones en inglés (predeterminado), español y francés, cuenta con una estrategia de testing completa, con tests unitarios, de integración, Snapshot, End-to-End (UITests).",
+      "Desarrollada en Kotlin con JeckPack Compose, basada en la arquitectura MVVM siguiendo los principios de Clean Architecture. Realiza llamadas tanto a mocks de datos en JSON como a APIs a través de Retrofit. Uso de inyección de dependencias automatizadas con Hilt e implementación de persistencia de datos local con DataStore y ROOM. Uso de Coroutines y Flows. Ofrece soporte multilingüe mediante el archivo Localizable, con versiones en inglés (predeterminado), español y francés y un diseño personalizado en Theme. Contiene una fuentes de datos desacopladas usando variantes de gradle combinando Build Types y Flavors. Por último cuenta con una estrategia de testing y líneas logs, incluyendo: tests unitarios y Snapshot.",
+    github: "https://github.com/CarlosCG2000/theSimpsonsPlaceAppAndroid",
+    image: "projects/17_app_simpsons_android.png",
+    link: "http://play.google.com/store/games?hl=es&pli=1", // Añadir enlace a la Google Play
+    tags: [TAGS.KOTLIN, TAGS.ANDROID], // Añadir más Tags
+    alt: "Captura de una de las pantalla de la aplicación de Android de los Simpsons",
+  },
+  {
+    title: "App de Los Simpsons",
+    description:
+      "Desarrollada en Swift 6 con SwiftUI, basada en la arquitectura MVVM siguiendo los principios de Clean Architecture. Se realizan llamadas tanto a mocks de datos JSON como a APIs utilizando URLSession. Se implementa persistencia de datos local con SwiftData y UserDefaults y uso de protocolos e inyección de dependencias. Se incorporan dependencias para animaciones (Lottie) y pruebas Snapshot a través de Swift Package Manager. Se ofrece soporte multilingüe mediante el archivo “Localizable”, con versiones en inglés (predeterminado), español y francés, cuenta con una estrategia de testing completa, con tests unitarios, de integración, Snapshot y End-to-End (UITests).",
     github: "https://github.com/CarlosCG2000/theSimpsonsPlaceApp",
     image: "projects/16_app_simpsons_ios.png",
     link: "https://apps.apple.com/es/developer/apple", // Añadir enlace a la App Store
