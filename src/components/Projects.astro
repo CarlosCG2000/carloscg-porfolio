@@ -126,6 +126,16 @@ const PROJECTS = [
     alt: "Captura de una de las pantalla de la aplicación de Android de los Simpsons",
   },
   {
+    title: "App de Los Simpsons",
+    description:
+      "Desarrollada en Swift 6 con SwiftUI, basada en la arquitectura MVVM siguiendo los principios de Clean Architecture. Se realizan llamadas tanto a mocks de datos JSON como a APIs utilizando URLSession. Se implementa persistencia de datos local con SwiftData y UserDefaults y uso de protocolos e inyección de dependencias. Se incorporan dependencias para animaciones (Lottie) y pruebas Snapshot a través de Swift Package Manager. Se ofrece soporte multilingüe mediante el archivo “Localizable”, con versiones en inglés (predeterminado), español y francés, cuenta con una estrategia de testing completa, con tests unitarios, de integración, Snapshot y End-to-End (UITests).",
+    github: "https://github.com/CarlosCG2000/theSimpsonsPlaceApp",
+    image: "projects/16_app_simpsons_ios.png",
+    link: "https://apps.apple.com/es/developer/apple", // Añadir enlace a la App Store
+    tags: [TAGS.SWIFT, TAGS.iOS], // Añadir más Tags
+    alt: "Captura de una de las pantalla de la aplicación de iOS de los Simpsons",
+  },
+  {
     title: "App Bloqueador de Llamadas",
     description:
       "Desarrollada en Swift 6 con SwiftUI, utilizando SwiftData como sistema de almacenamiento. Integra una extensión de llamadas para bloquear números de teléfono registrados por el usuario. Permite añadir, editar y eliminar contactos bloqueados desde la propia app. Incluye soporte multilingüe en inglés (predeterminado) y español.",
@@ -136,14 +146,14 @@ const PROJECTS = [
     alt: "Captura de una de las pantalla de la aplicación de Ios de para bloquear llamadas",
   },
   {
-    title: "App de Los Simpsons",
+    title: "Aplicación completa para la gestión de proyectos COIL'S",
     description:
-      "Desarrollada en Swift 6 con SwiftUI, basada en la arquitectura MVVM siguiendo los principios de Clean Architecture. Se realizan llamadas tanto a mocks de datos JSON como a APIs utilizando URLSession. Se implementa persistencia de datos local con SwiftData y UserDefaults y uso de protocolos e inyección de dependencias. Se incorporan dependencias para animaciones (Lottie) y pruebas Snapshot a través de Swift Package Manager. Se ofrece soporte multilingüe mediante el archivo “Localizable”, con versiones en inglés (predeterminado), español y francés, cuenta con una estrategia de testing completa, con tests unitarios, de integración, Snapshot y End-to-End (UITests).",
-    github: "https://github.com/CarlosCG2000/theSimpsonsPlaceApp",
-    image: "projects/16_app_simpsons_ios.png",
-    link: "https://apps.apple.com/es/developer/apple", // Añadir enlace a la App Store
-    tags: [TAGS.SWIFT, TAGS.iOS], // Añadir más Tags
-    alt: "Captura de una de las pantalla de la aplicación de iOS de los Simpsons",
+      "Trabajo final de grado. Aplicación web para la gestión de datos de proyectos de COIL (proyectos entre varias entidades de diferentes paises) con la capacidad de gestionar todo tipo de usuarios, proyectos, etc.",
+    link: "",
+    github: "https://github.com/CarlosCG2000/gestion-coils-front",
+    image: "projects/tfg-coil.webp",
+    tags: [TAGS.TS, TAGS.ANGULAR, TAGS.NODE, TAGS.MONGODB, TAGS.FIREBASE],
+    alt: "Captura de una de las pantallas de la aplicación de proyectos COIL",
   },
   {
     title: "3 en 1 App en Swift UI",
@@ -165,16 +175,6 @@ const PROJECTS = [
     alt: "Captura de una de las pantallas del proyecto de recetas",
   },
   {
-    title: "Aplicación completa para la gestión de proyectos COIL'S",
-    description:
-      "Trabajo final de grado. Aplicación web para la gestión de datos de proyectos de COIL (proyectos entre varias entidades de diferentes paises) con la capacidad de gestionar todo tipo de usuarios, proyectos, etc.",
-    link: "",
-    github: "https://github.com/CarlosCG2000/gestion-coils-front",
-    image: "projects/tfg-coil.webp",
-    tags: [TAGS.TS, TAGS.ANGULAR, TAGS.NODE, TAGS.MONGODB, TAGS.FIREBASE],
-    alt: "Captura de una de las pantallas de la aplicación de proyectos COIL",
-  },
-  {
     title: "Sistema de registro de producción Complex",
     description: "Proyecto de Complex en Rumania para Huercasa (agricola).",
     link: "",
@@ -183,16 +183,16 @@ const PROJECTS = [
     tags: [TAGS.MICRO_PLATFORM],
     alt: "Captura de una de unas de las pantallas de la interfaz del proyecto",
   },
-  {
-    title: "Prueba Técnica Junior",
-    description:
-      "Crea una aplicación para buscar películas, evitando que se haga una misma búqueda dos veces y que la búsqueda se haga automáticamente al escribir pero con debounce.",
-    link: "",
-    github: "https://github.com/CarlosCG2000/prueba-tecnica-junior",
-    image: "projects/5-prueba-junior.webp",
-    tags: [TAGS.JS, TAGS.REACT, TAGS.VITE],
-    alt: "Captura de la prueba técnica para el puesto de Junior",
-  },
+  // {
+  //   title: "Prueba Técnica Junior",
+  //   description:
+  //     "Crea una aplicación para buscar películas, evitando que se haga una misma búqueda dos veces y que la búsqueda se haga automáticamente al escribir pero con debounce.",
+  //   link: "",
+  //   github: "https://github.com/CarlosCG2000/prueba-tecnica-junior",
+  //   image: "projects/5-prueba-junior.webp",
+  //   tags: [TAGS.JS, TAGS.REACT, TAGS.VITE],
+  //   alt: "Captura de la prueba técnica para el puesto de Junior",
+  // },
   {
     title: "Clon de Google Translate con ChatGPT",
     description:
@@ -203,16 +203,16 @@ const PROJECTS = [
     tags: [TAGS.TS, TAGS.REACT, TAGS.VITE],
     alt: "Captura de mi propio Google Translate con ChatGPT",
   },
-  {
-    title: "TodoMVC App",
-    description:
-      "Listar, añadir, borrar, completar y filtrar los TODOs, añadir estilos del TodoMVC, animaciones con AutoAnimate, etc.",
-    link: "https://todos-lista.netlify.app",
-    github: "https://github.com/CarlosCG2000/TodoMVC-App",
-    image: "projects/8-todo-app.webp",
-    tags: [TAGS.TS, TAGS.REACT, TAGS.VITE],
-    alt: "Captura de TodoMVC App",
-  },
+  // {
+  //   title: "TodoMVC App",
+  //   description:
+  //     "Listar, añadir, borrar, completar y filtrar los TODOs, añadir estilos del TodoMVC, animaciones con AutoAnimate, etc.",
+  //   link: "https://todos-lista.netlify.app",
+  //   github: "https://github.com/CarlosCG2000/TodoMVC-App",
+  //   image: "projects/8-todo-app.webp",
+  //   tags: [TAGS.TS, TAGS.REACT, TAGS.VITE],
+  //   alt: "Captura de TodoMVC App",
+  // },
   {
     title: "Librería de enrutamiento en React",
     description:
@@ -223,16 +223,16 @@ const PROJECTS = [
     tags: [TAGS.JS, TAGS.REACT, TAGS.VITE, TAGS.NPM],
     alt: "Captura de la pagina de NPM donde tengo publicada la libreria",
   },
-  {
-    title: "CRUD con Redux Toolkit",
-    description:
-      "El estilo de aplicación más típico solucionado usando un estado global con Redux Toolkit",
-    link: "",
-    github: "https://github.com/CarlosCG2000/App-CRUD-Redux",
-    image: "projects/10-crud-redux.webp",
-    tags: [TAGS.TS, TAGS.REACT, TAGS.VITE],
-    alt: "Captura de una la pantalla de CRUD con Redux Toolkit y TypeScript",
-  },
+  // {
+  //   title: "CRUD con Redux Toolkit",
+  //   description:
+  //     "El estilo de aplicación más típico solucionado usando un estado global con Redux Toolkit",
+  //   link: "",
+  //   github: "https://github.com/CarlosCG2000/App-CRUD-Redux",
+  //   image: "projects/10-crud-redux.webp",
+  //   tags: [TAGS.TS, TAGS.REACT, TAGS.VITE],
+  //   alt: "Captura de una la pantalla de CRUD con Redux Toolkit y TypeScript",
+  // },
   {
     title: "Prueba Técnica Trainee",
     description:
@@ -253,16 +253,16 @@ const PROJECTS = [
     tags: [TAGS.JS, TAGS.REACT, TAGS.VITE],
     alt: "Captura de la prueba técnica para el puesto de Trainee-Junior",
   },
-  {
-    title: "Juego Tres en Raya",
-    description:
-      "Juego para dos personas del clásico tres en raya con almacenamiento en el Local Storage para guardar la partida actual.",
-    link: "https://juego-3-en-raya.netlify.app/",
-    github: "https://github.com/CarlosCG2000/juego-tres-en-raya",
-    image: "projects/2-tres-en-raya.webp",
-    tags: [TAGS.JS, TAGS.REACT, TAGS.VITE],
-    alt: "Captura de la interfaz del proyecto de tarjetas de seguidores estilo X (Twitter)",
-  },
+  // {
+  //   title: "Juego Tres en Raya",
+  //   description:
+  //     "Juego para dos personas del clásico tres en raya con almacenamiento en el Local Storage para guardar la partida actual.",
+  //   link: "https://juego-3-en-raya.netlify.app/",
+  //   github: "https://github.com/CarlosCG2000/juego-tres-en-raya",
+  //   image: "projects/2-tres-en-raya.webp",
+  //   tags: [TAGS.JS, TAGS.REACT, TAGS.VITE],
+  //   alt: "Captura de la interfaz del proyecto de tarjetas de seguidores estilo X (Twitter)",
+  // },
   // {
   //   title: "Etiquetas de seguidores estilo X (Twitter)",
   //   description:
@@ -289,7 +289,7 @@ const PROJECTS = [
 <div class="flex flex-col gap-y-16">
   {
     PROJECTS.map(({ image, title, description, tags, alt, link, github }) => (
-      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0 items-center">
         <div class="w-full md:w-1/2">
           <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
             <img
