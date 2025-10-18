@@ -13,25 +13,30 @@ const { title, company, description, link, date } = Astro.props;
 ---
 
 <div
-  class="relative mx-12 pb-12 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-black/20 dark:before:border-white/15 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]"
+  class="relative mx-12 pb-12 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-gray-300 dark:before:border-gray-700 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4] group hover:before:border-blue-400 dark:hover:before:border-blue-600 transition-all duration-300"
 >
   <div class="relative pb-12 md:col-span-2">
-    <div class="sticky top-0">
-      <span class="text-yellow-400 -left-[42px] absolute rounded-full text-5xl"
+    <div class="sticky top-24">
+      <span
+        class="text-blue-500 dark:text-blue-400 -left-[42px] absolute rounded-full text-5xl transition-transform duration-300 group-hover:scale-125"
         >&bull;</span
       >
 
-      <h3 class="text-xl font-bold text-yellow-400">{title}</h3>
-      <h4 class="font-semibold text-xl text-gray-600 dark:text-white">
+      <h3
+        class="text-xl font-bold text-gray-900 dark:text-white mb-1 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300"
+      >
+        {title}
+      </h3>
+      <h4 class="font-semibold text-lg text-gray-700 dark:text-gray-300 mb-1">
         {company}
       </h4>
-      <time class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80"
+      <time class="p-0 m-0 text-sm text-gray-500 dark:text-gray-400 font-medium"
         >{date}</time
       >
     </div>
   </div>
   <div
-    class="relative flex flex-col gap-2 pb-4 text-gray-600 dark:text-gray-300 md:col-span-3"
+    class="relative flex flex-col gap-3 pb-4 text-gray-700 dark:text-gray-300 md:col-span-3 leading-relaxed"
   >
     {description}
     {
@@ -40,7 +45,7 @@ const { title, company, description, link, date } = Astro.props;
           Saber más{" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="w-5 icon icon-tabler icon-tabler-chevron-right"
+            class="w-5 icon icon-tabler icon-tabler-chevron-right inline-block transition-transform group-hover:translate-x-1"
             width="24"
             height="24"
             viewBox="0 0 24 24"

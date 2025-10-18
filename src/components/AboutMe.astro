@@ -3,44 +3,52 @@ const personalImageAlt = "Carlos Caño";
 ---
 
 <article
-  class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row"
+  class="flex flex-col items-center justify-center gap-12 text-gray-700 dark:text-gray-300 md:flex-row md:gap-16"
 >
   <div
-    class="[&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
+    class="[&>p]:mb-6 [&>p>strong]:text-blue-600 dark:[&>p>strong]:text-blue-400 [&>p>strong]:font-semibold text-pretty order-2 md:order-1 text-lg leading-relaxed"
   >
     <p>
       ¡Soy Carlos! Estudié <strong>ingeniería infórmatica</strong> y, de forma autodidacta,
       me especialice en el <strong>desarrollo móvil y web.</strong>
-      <br />
-      <br />
-      Soy una persona proactiva y apasionada por el desarrollo de aplicaciones móviles
-      y web. Me encanta explorar nuevas tecnologías, pero actualmente mis principales
-      intereses son <strong
+    </p>
+    <p>
+      Soy una persona proactiva y apasionada por el desarrollo de aplicaciones
+      móviles y web. Me encanta explorar nuevas tecnologías, pero actualmente
+      mis principales intereses son <strong
         >SwiftUI, Kotlin con Jetpack Compose y el desarrollo web</strong
       >, en ese orden. Mi enfoque es crear proyectos <strong
         >escalables, mantenibles y bien estructurados,</strong
       >
-      estableciendo desde el inicio una arquitectura sólida. <br />
-      <br />
+      estableciendo desde el inicio una arquitectura sólida.
+    </p>
+    <p>
       Siempre priorizo el <strong>desarrollo nativo</strong>, siguiendo las
       mejores prácticas recomendadas en cada plataforma. Para mí, una aplicación
       debe ser <strong>accesible, inmersiva y fluida</strong> para brindar la mejor
-      experiencia al usuario y <strong>diferenciarse del resto.</strong><br />
-      <br />
-      En mi tiempo libre, me gusta explorar nuevas funcionalidades y arquitecturas
-      que puedan mejorar mis proyectos. Además de mi pasión por la tecnología, me
-      gusta desconectar manteniendo un <strong>estilo de vida saludable</strong
+      experiencia al usuario y <strong>diferenciarse del resto.</strong>
+    </p>
+    <p>
+      En mi tiempo libre, me gusta explorar nuevas funcionalidades y
+      arquitecturas que puedan mejorar mis proyectos. Además de mi pasión por la
+      tecnología, me gusta desconectar manteniendo un <strong
+        >estilo de vida saludable</strong
       >, disfrutando del
       <strong>deporte, la lectura y la música</strong>.
     </p>
   </div>
 
-  <img
-    width="500"
-    height="500"
-    src="mi-foto.webp"
-    alt={personalImageAlt}
-    class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20"
-    style="object-position: 50% 30%"
-  />
+  <div class="order-1 md:order-2 relative group flex-shrink-0">
+    <div
+      class="absolute -inset-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity duration-500"
+    >
+    </div>
+    <img
+      width="500"
+      height="500"
+      src="mi-foto.webp"
+      alt={personalImageAlt}
+      class="relative object-contain w-full max-w-[300px] md:max-w-[350px] lg:max-w-[400px] h-auto p-2 rotate-3 lg:p-3 rounded-2xl bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 ring-2 ring-gray-200 dark:ring-gray-700 shadow-2xl transition-transform duration-300 group-hover:rotate-6 group-hover:scale-105"
+    />
+  </div>
 </article>

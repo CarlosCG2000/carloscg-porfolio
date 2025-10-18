@@ -1,12 +1,21 @@
 <div class="flex items-center">
-    <span class="relative inline-flex overflow-hidden rounded-full p-[1px]">
+  <span
+    class="relative inline-flex overflow-hidden rounded-full p-[1px] shadow-lg"
+  >
+    <span
+      class="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#10b981_0%,#059669_50%,#10b981_100%)]"
+    ></span>
+    <div
+      class="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-semibold text-green-700 bg-gradient-to-br from-green-50 to-emerald-100 rounded-full cursor-pointer dark:from-gray-800 dark:to-gray-900 dark:text-green-400 backdrop-blur-xl whitespace-nowrap shadow-inner"
+    >
+      <span class="relative flex h-2 w-2 mr-2">
         <span
-            class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#51E4B8_0%,#21554E_50%,#51E4B8_100%)]"
+          class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"
         ></span>
-        <div
-            class="inline-flex items-center justify-center w-full px-3 py-1 text-sm text-green-800 bg-green-100 rounded-full cursor-pointer dark:bg-gray-800 dark:text-white/80 backdrop-blur-3xl whitespace-nowrap"
-        >
-            <slot />
-        </div>
-    </span>
+        <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"
+        ></span>
+      </span>
+      <slot />
+    </div>
+  </span>
 </div>

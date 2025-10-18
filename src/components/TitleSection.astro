@@ -1,5 +1,15 @@
 <h2
-	class={`flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white ${Astro.props.className}`}
+  class={`flex items-center mb-10 text-3xl md:text-4xl font-bold gap-x-4 text-gray-900 dark:text-white relative group ${Astro.props.className}`}
 >
-    <slot />
+  <slot />
+  <div
+    class="flex-1 h-px bg-gradient-to-r from-gray-300 to-transparent dark:from-gray-700 dark:to-transparent ml-4"
+  >
+  </div>
 </h2>
+
+<style>
+  h2 {
+    letter-spacing: -0.02em;
+  }
+</style>

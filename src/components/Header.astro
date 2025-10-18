@@ -2,111 +2,135 @@
 import ThemeToggle from "./ThemeToggle.astro";
 
 const navItems = [
-    {
-        title: "Experiencia",
-        label: "experiencia",
-        url: "/#experiencia",
-    },
-    {
-        title: "Proyectos",
-        label: "proyectos",
-        url: "/#proyectos",
-    },
-    {
-        title: "Sobre mí",
-        label: "sobre-mi",
-        url: "/#sobre-mi",
-    },
-    {
-        title: "Contacto",
-        label: "contacto",
-        url: "mailto:canogomezcarlos@gmail.com",
-    },
+  {
+    title: "Experiencia",
+    label: "experiencia",
+    url: "/#experiencia",
+  },
+  {
+    title: "Proyectos",
+    label: "proyectos",
+    url: "/#proyectos",
+  },
+  {
+    title: "Sobre mí",
+    label: "sobre-mi",
+    url: "/#sobre-mi",
+  },
+  {
+    title: "Contacto",
+    label: "contacto",
+    url: "mailto:canogomezcarlos@gmail.com",
+  },
 ];
 ---
 
 <header
-    class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
+  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
 >
-    <nav
-        class="flex gap-x-4 px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"
-    >
-        {
-            navItems.map((link) => (
-                <a
-                    class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500"
-                    aria-label={link.label}
-                    href={link.url}
-                >
-                    {link.title}
-                </a>
-            ))
-        }
-        <ThemeToggle />
-    </nav>
+  <nav
+    id="header-nav"
+    class="flex gap-x-2 md:gap-x-4 px-4 md:px-6 py-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center backdrop-blur-md bg-white/70 dark:bg-gray-900/70 border border-gray-200/50 dark:border-gray-700/50 shadow-lg shadow-gray-200/50 dark:shadow-gray-900/50"
+  >
+    {
+      navItems.map((link) => (
+        <a
+          class="nav-link relative block px-3 py-2 transition-all duration-300 hover:text-blue-500 dark:hover:text-blue-400 rounded-lg hover:bg-gray-100/50 dark:hover:bg-gray-800/50"
+          aria-label={link.label}
+          href={link.url}
+        >
+          {link.title}
+        </a>
+      ))
+    }
+    <ThemeToggle />
+  </nav>
 </header>
 
 <script>
-    document.addEventListener("astro:page-load", () => {
-        const sections = document.querySelectorAll("section");
-        const navItems = document.querySelectorAll("header nav a");
+  document.addEventListener("astro:page-load", () => {
+    const sections = document.querySelectorAll("section");
+    const navItems = document.querySelectorAll("header nav a.nav-link");
 
-        const callback = (entries: any[]) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    navItems.forEach((item) => {
-                        if (
-                            item.getAttribute("aria-label") == entry.target.id
-                        ) {
-                            item.classList.add("text-blue-500");
-                        } else {
-                            item.classList.remove("text-blue-500");
-                        }
-                    });
-                }
-            });
-        };
-
-        const observer = new IntersectionObserver(callback, {
-            root: null,
-            rootMargin: "0px",
-            threshold: 0.3,
-        });
-
-        sections.forEach((section) => {
-            observer.observe(section);
-        });
-
-        // Cleanup function
-        document.onvisibilitychange = () => {
-            if (document.visibilityState === "hidden") {
-                observer.disconnect();
+    const callback = (entries: any[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          navItems.forEach((item) => {
+            if (item.getAttribute("aria-label") == entry.target.id) {
+              item.classList.add(
+                "text-blue-500",
+                "dark:text-blue-400",
+                "font-semibold"
+              );
+              item.classList.add("active-nav-link");
             } else {
-                sections.forEach((section) => {
-                    observer.observe(section);
-                });
+              item.classList.remove(
+                "text-blue-500",
+                "dark:text-blue-400",
+                "font-semibold"
+              );
+              item.classList.remove("active-nav-link");
             }
-        };
+          });
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(callback, {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.3,
     });
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+
+    // Cleanup function
+    document.onvisibilitychange = () => {
+      if (document.visibilityState === "hidden") {
+        observer.disconnect();
+      } else {
+        sections.forEach((section) => {
+          observer.observe(section);
+        });
+      }
+    };
+  });
 </script>
 
 <style>
-    nav {
-        animation: nav-shadown 1s linear both;
-        animation-timeline: scroll();
-        animation-range: 0 100px;
-    }
+  .active-nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+    border-radius: 2px;
+  }
 
-    nav {
-        @apply dark:bg-gray-800/90 bg-white/50;
-    }
+  .nav-link {
+    position: relative;
+  }
 
-    @keyframes nav-shadown {
-        0% {
-            @apply dark:bg-gray-800/0 bg-white/0;
-        }
-        to {
-            @apply shadow-lg ring-1 backdrop-blur ring-white/10;
-        }
-    }
+  .nav-link::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 0.5rem;
+    background: linear-gradient(
+      135deg,
+      rgba(59, 130, 246, 0.1),
+      rgba(147, 51, 234, 0.1)
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .nav-link:hover::before {
+    opacity: 1;
+  }
 </style>

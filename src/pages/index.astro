@@ -10,41 +10,48 @@ import SectionContainer from "../components/SectionContainer.astro";
 import Hero from "../components/Hero.astro";
 import TitleSection from "../components/TitleSection.astro";
 import SchoolIcon from "../icons/School.astro";
+import ScrollReveal from "../components/ScrollReveal.astro";
 ---
 
 <Layout
-	title="Carlos Caño - Porfolio"
-	description="Ingeniero informático, especializado en el desarrollo de aplicaciones web y móviles."
+  title="Carlos Caño - Porfolio"
+  description="Ingeniero informático, especializado en el desarrollo de aplicaciones web y móviles."
 >
-	<main class="px-4">
-		<SectionContainer class="py-12 md:py-20">
-			<Hero />
-		</SectionContainer>
-	</main>
+  <main class="px-4">
+    <SectionContainer class="py-16 md:py-24">
+      <Hero />
+    </SectionContainer>
+  </main>
 
-	<div class="space-y-24">
-		<SectionContainer id="experiencia">
-			<TitleSection>
-				<SchoolIcon class="size-8" />
-				Experiencia académica
-			</TitleSection>
-			<Experience />
-		</SectionContainer>
+  <div class="space-y-32 md:space-y-40">
+    <ScrollReveal delay={100}>
+      <SectionContainer id="experiencia">
+        <TitleSection>
+          <SchoolIcon class="size-8" />
+          Experiencia académica
+        </TitleSection>
+        <Experience />
+      </SectionContainer>
+    </ScrollReveal>
 
-		<SectionContainer id="proyectos" class="min-h-[200vh]">
-			<TitleSection>
-				<CodeIcon class="size-8" />
-				Proyectos
-			</TitleSection>
-			<Projects />
-		</SectionContainer>
+    <ScrollReveal delay={200}>
+      <SectionContainer id="proyectos">
+        <TitleSection>
+          <CodeIcon class="size-8" />
+          Proyectos
+        </TitleSection>
+        <Projects />
+      </SectionContainer>
+    </ScrollReveal>
 
-		<SectionContainer id="sobre-mi">
-			<TitleSection>
-				<ProfileCheck class="size-8" />
-				Sobre mí
-			</TitleSection>
-			<AboutMe />
-		</SectionContainer>
-	</div>
+    <ScrollReveal delay={300}>
+      <SectionContainer id="sobre-mi">
+        <TitleSection>
+          <ProfileCheck class="size-8" />
+          Sobre mí
+        </TitleSection>
+        <AboutMe />
+      </SectionContainer>
+    </ScrollReveal>
+  </div>
 </Layout>
