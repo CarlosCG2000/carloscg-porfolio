@@ -14,16 +14,17 @@ import ScrollReveal from "../components/ScrollReveal.astro";
 ---
 
 <Layout
-  title="Carlos Caño - Porfolio"
-  description="Ingeniero informático, especializado en el desarrollo de aplicaciones web y móviles."
+  title="Carlos Caño - Porfolio | Desarrollador Móvil y Web"
+  description="Ingeniero informático especializado en desarrollo de aplicaciones móviles (SwiftUI, Kotlin) y web. Portafolio de Carlos Caño con proyectos de desarrollo nativo iOS, Android y aplicaciones web modernas."
+  keywords="Carlos Caño, desarrollador iOS, desarrollador Android, SwiftUI, Kotlin, Jetpack Compose, desarrollo web, programador Salamanca, ingeniero informático, UPSA"
 >
-  <main class="px-4">
+  <main id="main-content" class="px-4">
     <SectionContainer class="py-16 md:py-24">
       <Hero />
     </SectionContainer>
   </main>
 
-  <div class="space-y-32 md:space-y-40">
+  <div class="space-y-24 md:space-y-32">
     <ScrollReveal delay={100}>
       <SectionContainer id="experiencia">
         <TitleSection>
@@ -39,6 +40,27 @@ import ScrollReveal from "../components/ScrollReveal.astro";
         <TitleSection>
           <CodeIcon class="size-8" />
           Proyectos
+          <span
+            class="ml-3 inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 px-3 py-1 text-sm font-bold text-white shadow-lg animate-bounce-slow"
+            title="Total de proyectos"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-4 h-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+              ></path>
+            </svg>
+            <span class="counter-animated" data-target="11">0</span>
+          </span>
         </TitleSection>
         <Projects />
       </SectionContainer>
@@ -55,3 +77,57 @@ import ScrollReveal from "../components/ScrollReveal.astro";
     </ScrollReveal>
   </div>
 </Layout>
+
+<style>
+  @keyframes bounce-slow {
+    0%,
+    100% {
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      transform: translateY(-5px) scale(1.05);
+    }
+  }
+
+  .animate-bounce-slow {
+    animation: bounce-slow 2s ease-in-out infinite;
+  }
+
+  .counter-animated {
+    min-width: 1.5rem;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+  }
+</style>
+
+<script>
+  // Animación del contador de proyectos
+  function animateCounter() {
+    const counter = document.querySelector(".counter-animated");
+    if (!counter) return;
+
+    const target = parseInt(counter.getAttribute("data-target") || "0");
+    const duration = 2000; // 2 segundos
+    const steps = 60;
+    const increment = target / steps;
+    let current = 0;
+    let step = 0;
+
+    const timer = setInterval(() => {
+      step++;
+      current = Math.min(Math.ceil(increment * step), target);
+      counter.textContent = current.toString();
+
+      if (step >= steps) {
+        clearInterval(timer);
+        counter.textContent = target.toString();
+      }
+    }, duration / steps);
+  }
+
+  // Ejecutar cuando el DOM esté listo
+  document.addEventListener("DOMContentLoaded", animateCounter);
+
+  // También ejecutar en navegación con View Transitions
+  document.addEventListener("astro:page-load", animateCounter);
+</script>

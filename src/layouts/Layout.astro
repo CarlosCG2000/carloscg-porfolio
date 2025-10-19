@@ -4,32 +4,86 @@ import "@fontsource-variable/onest";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import CustomCursor from "../components/CustomCursor.astro";
+import StructuredData from "../components/StructuredData.astro";
 import { ViewTransitions } from "astro:transitions";
 
 interface Props {
   title: string;
   description: string;
+  image?: string;
+  keywords?: string;
 }
 
-const { description, title } = Astro.props;
+const {
+  description,
+  title,
+  image = "/og-image.jpg",
+  keywords = "Carlos Caño, desarrollador, ingeniero informático, SwiftUI, Kotlin, desarrollo móvil, desarrollo web, programador, UPSA, Salamanca",
+} = Astro.props;
+
+const canonicalURL = Astro.site
+  ? new URL(Astro.url.pathname, Astro.site)
+  : undefined;
 ---
 
 <!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content={description} />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
+
+    <!-- SEO Principal -->
     <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta name="author" content="Carlos Caño Gómez" />
+    {canonicalURL && <link rel="canonical" href={canonicalURL} />}
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    {canonicalURL && <meta property="og:url" content={canonicalURL} />}
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(image, Astro.url)} />
+    <meta property="og:locale" content="es_ES" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    {canonicalURL && <meta name="twitter:url" content={canonicalURL} />}
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL(image, Astro.url)} />
+
+    <!-- Tema y colores -->
+    <meta name="theme-color" content="#3b82f6" />
+    <meta name="color-scheme" content="dark light" />
+
+    <!-- Iconos y manifest -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- Preconnect para fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Datos estructurados para SEO -->
+    <StructuredData />
+
     <ViewTransitions />
-    <script>
+
+    <!-- Skip to main content para accesibilidad -->
+    <script is:inline>
       document.documentElement.classList.add("dark"); // Activar el modo oscuro por defecto
     </script>
   </head>
 
   <body class="relative text-black dark:text-white">
+    <!-- Skip to main content para accesibilidad de teclado -->
+    <a href="#main-content" class="skip-to-main-content">
+      Saltar al contenido principal
+    </a>
+
     <CustomCursor />
     <!-- El fondo de pantalla con el color degradado si queremos otro diferente en: -->
     <div
@@ -46,9 +100,48 @@ const { description, title } = Astro.props;
         color-scheme: light dark;
       }
 
+      /* Skip to main content - Accesibilidad */
+      .skip-to-main-content {
+        position: absolute;
+        top: -100px;
+        left: 0;
+        background: #3b82f6;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        font-weight: 600;
+        z-index: 100;
+        border-radius: 0 0 0.5rem 0;
+        transition: top 0.3s;
+      }
+
+      .skip-to-main-content:focus {
+        top: 0;
+        outline: 3px solid #60a5fa;
+        outline-offset: 2px;
+      }
+
+      /* Mejorar el enfoque del teclado */
+      *:focus-visible {
+        outline: 2px solid #3b82f6;
+        outline-offset: 2px;
+        border-radius: 4px;
+      }
+
+      /* Reducir movimiento para usuarios que lo prefieren */
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+
       html {
         font-family: "Onest Variable", system-ui, sans-serif;
         scroll-behavior: smooth;
+        scroll-padding-top: 100px; /* Para compensar el header fijo */
       }
 
       body {

@@ -27,16 +27,18 @@ const navItems = [
 
 <header
   class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
+  role="banner"
 >
   <nav
     id="header-nav"
     class="flex gap-x-2 md:gap-x-4 px-4 md:px-6 py-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center backdrop-blur-md bg-white/70 dark:bg-gray-900/70 border border-gray-200/50 dark:border-gray-700/50 shadow-lg shadow-gray-200/50 dark:shadow-gray-900/50"
+    aria-label="Navegación principal"
   >
     {
       navItems.map((link) => (
         <a
           class="nav-link relative block px-3 py-2 transition-all duration-300 hover:text-blue-500 dark:hover:text-blue-400 rounded-lg hover:bg-gray-100/50 dark:hover:bg-gray-800/50"
-          aria-label={link.label}
+          aria-label={`Ir a ${link.title}`}
           href={link.url}
         >
           {link.title}

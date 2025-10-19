@@ -1,0 +1,57 @@
+---
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Carlos Caño Gómez",
+  jobTitle: "Ingeniero Informático | Desarrollador Móvil y Web",
+  description:
+    "Ingeniero informático especializado en desarrollo de aplicaciones móviles (SwiftUI, Kotlin) y web. Experto en desarrollo nativo iOS, Android y aplicaciones web modernas.",
+  url: "https://carloscg-porfolio.netlify.app",
+  image: "https://carloscg-porfolio.netlify.app/mi-foto-perfil.png",
+  email: "canogomezcarlos@gmail.com",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Salamanca",
+    addressCountry: "ES",
+  },
+  alumniOf: {
+    "@type": "EducationalOrganization",
+    name: "Universidad Pontificia de Salamanca",
+    sameAs: "https://www.upsa.es/",
+  },
+  hasCredential: [
+    {
+      "@type": "EducationalOccupationalCredential",
+      name: "Grado en Ingeniería Informática",
+      educationalLevel: "Bachelor's Degree",
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      name: "Máster en Informática Móvil (MIMO)",
+      educationalLevel: "Master's Degree",
+    },
+  ],
+  knowsAbout: [
+    "SwiftUI",
+    "Kotlin",
+    "Jetpack Compose",
+    "Desarrollo iOS",
+    "Desarrollo Android",
+    "TypeScript",
+    "Angular",
+    "React",
+    "Node.js",
+    "Desarrollo Web",
+    "Arquitectura de Software",
+    "Clean Architecture",
+    "MVVM",
+  ],
+  sameAs: [
+    "https://github.com/CarlosCG2000",
+    "https://www.linkedin.com/in/carlos-cano-gomez-655463141/",
+    "https://discordapp.com/users/1283082190938439776",
+  ],
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
