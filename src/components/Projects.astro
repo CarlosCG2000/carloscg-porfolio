@@ -116,6 +116,16 @@ const TAGS = {
 
 const PROJECTS = [
   {
+    title: "COILApp - iOS",
+    description:
+      "Trabajo final de máster. Aplicación móvil nativa con SwiftUI para iOS/iPadOS destinada a optimizar la gestión de participación en proyectos COIL. Permite a los alumnos registrar sus datos de forma autónoma y proporciona a la UPSA un sistema centralizado para administrar, consultar y certificar estas experiencias colaborativas de manera más segura, reduciendo la carga administrativa sobre los docentes. Actualmente, la aplicación está en fase de producción a nivel interno de la universidad.",
+    github: "https://github.com/CarlosCG2000/coilAppiOS",
+    image: "projects/19_coilapp_ios.png",
+    link: "", // Añadir enlace a la Google Play
+    tags: [TAGS.iOS, TAGS.SWIFT, TAGS.FIREBASE, TAGS.MONGODB, TAGS.NODE], // Añadir más Tags
+    alt: "Captura de una de las pantalla de la aplicación de Android de los Simpsons",
+  },
+  {
     title: "App de Los Simpsons",
     description:
       "Desarrollada en Kotlin con JeckPack Compose, basada en la arquitectura MVVM siguiendo los principios de Clean Architecture. Realiza llamadas tanto a mocks de datos en JSON como a APIs a través de Retrofit. Uso de inyección de dependencias automatizadas con Hilt e implementación de persistencia de datos local con DataStore y ROOM. Uso de Coroutines y Flows. Ofrece soporte multilingüe mediante el archivo Localizable, con versiones en inglés (predeterminado), español y francés y un diseño personalizado en Theme. Contiene una fuentes de datos desacopladas usando variantes de gradle combinando Build Types y Flavors. Por último cuenta con una estrategia de testing y líneas logs, incluyendo: tests unitarios y Snapshot.",
@@ -146,14 +156,24 @@ const PROJECTS = [
     alt: "Captura de una de las pantalla de la aplicación de Ios de para bloquear llamadas",
   },
   {
-    title: "Aplicación completa para la gestión de proyectos COIL'S",
+    title: "COILApp - Web",
     description:
-      "Trabajo final de grado. Aplicación web para la gestión de datos de proyectos de COIL (proyectos entre varias entidades de diferentes paises) con la capacidad de gestionar todo tipo de usuarios, proyectos, etc.",
+      "Trabajo final de grado. Aplicación Web para la gestión de datos de proyectos de COIL (proyectos entre varias entidades de diferentes paises) con la capacidad de gestionar todo tipo de usuarios, proyectos, etc.",
     link: "",
     github: "https://github.com/CarlosCG2000/gestion-coils-front",
     image: "projects/tfg-coil.webp",
     tags: [TAGS.TS, TAGS.ANGULAR, TAGS.NODE, TAGS.MONGODB, TAGS.FIREBASE],
     alt: "Captura de una de las pantallas de la aplicación de proyectos COIL",
+  },
+  {
+    title: "Librería de enrutamiento en React",
+    description:
+      "Publicación de una libreria en NPM. Un proyecto desarrollado desde 0, donde creo un enrutamiento de navegación estilo React Router.",
+    link: "https://www.npmjs.com/package/07-navegation-router?activeTab=code",
+    github: "https://github.com/CarlosCG2000/React-Router",
+    image: "/projects/7-rutas.webp",
+    tags: [TAGS.JS, TAGS.REACT, TAGS.VITE, TAGS.NPM],
+    alt: "Captura de la pagina de NPM donde tengo publicada la libreria",
   },
   {
     title: "3 en 1 App en Swift UI",
@@ -183,16 +203,6 @@ const PROJECTS = [
     tags: [TAGS.MICRO_PLATFORM],
     alt: "Captura de una de unas de las pantallas de la interfaz del proyecto",
   },
-  // {
-  //   title: "Prueba Técnica Junior",
-  //   description:
-  //     "Crea una aplicación para buscar películas, evitando que se haga una misma búqueda dos veces y que la búsqueda se haga automáticamente al escribir pero con debounce.",
-  //   link: "",
-  //   github: "https://github.com/CarlosCG2000/prueba-tecnica-junior",
-  //   image: "projects/5-prueba-junior.webp",
-  //   tags: [TAGS.JS, TAGS.REACT, TAGS.VITE],
-  //   alt: "Captura de la prueba técnica para el puesto de Junior",
-  // },
   {
     title: "Clon de Google Translate con ChatGPT",
     description:
@@ -204,6 +214,16 @@ const PROJECTS = [
     alt: "Captura de mi propio Google Translate con ChatGPT",
   },
   // {
+  //   title: "Prueba Técnica Junior",
+  //   description:
+  //     "Crea una aplicación para buscar películas, evitando que se haga una misma búqueda dos veces y que la búsqueda se haga automáticamente al escribir pero con debounce.",
+  //   link: "",
+  //   github: "https://github.com/CarlosCG2000/prueba-tecnica-junior",
+  //   image: "projects/5-prueba-junior.webp",
+  //   tags: [TAGS.JS, TAGS.REACT, TAGS.VITE],
+  //   alt: "Captura de la prueba técnica para el puesto de Junior",
+  // },
+  // {
   //   title: "TodoMVC App",
   //   description:
   //     "Listar, añadir, borrar, completar y filtrar los TODOs, añadir estilos del TodoMVC, animaciones con AutoAnimate, etc.",
@@ -213,16 +233,6 @@ const PROJECTS = [
   //   tags: [TAGS.TS, TAGS.REACT, TAGS.VITE],
   //   alt: "Captura de TodoMVC App",
   // },
-  {
-    title: "Librería de enrutamiento en React",
-    description:
-      "Publicación de una libreria en NPM. Un proyecto desarrollado desde 0, donde creo un enrutamiento de navegación estilo React Router.",
-    link: "https://www.npmjs.com/package/07-navegation-router?activeTab=code",
-    github: "",
-    image: "/projects/7-rutas.webp",
-    tags: [TAGS.JS, TAGS.REACT, TAGS.VITE, TAGS.NPM],
-    alt: "Captura de la pagina de NPM donde tengo publicada la libreria",
-  },
   // {
   //   title: "CRUD con Redux Toolkit",
   //   description:
