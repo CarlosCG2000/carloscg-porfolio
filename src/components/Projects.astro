@@ -194,15 +194,15 @@ const PROJECTS = [
     tags: [TAGS.TS, TAGS.ANGULAR, TAGS.IONIC, TAGS.LOCAL_STORAGE],
     alt: "Captura de una de las pantallas del proyecto de recetas",
   },
-  {
-    title: "Sistema de registro de producción Complex",
-    description: "Proyecto de Complex en Rumania para Huercasa (agricola).",
-    link: "",
-    github: "https://github.com/CarlosCG2000/huercasa-complex",
-    image: "projects/powerapp.webp",
-    tags: [TAGS.MICRO_PLATFORM],
-    alt: "Captura de una de unas de las pantallas de la interfaz del proyecto",
-  },
+  // {
+  //   title: "Sistema de registro de producción Complex",
+  //   description: "Proyecto de Complex en Rumania para Huercasa (agricola).",
+  //   link: "",
+  //   github: "https://github.com/CarlosCG2000/huercasa-complex",
+  //   image: "projects/powerapp.webp",
+  //   tags: [TAGS.MICRO_PLATFORM],
+  //   alt: "Captura de una de unas de las pantallas de la interfaz del proyecto",
+  // },
   {
     title: "Clon de Google Translate con ChatGPT",
     description:
@@ -297,7 +297,7 @@ const PROJECTS = [
 
 // Extraer todos los tags únicos de los proyectos
 const allTags = Array.from(
-  new Set(PROJECTS.flatMap((project) => project.tags.map((tag) => tag.name)))
+  new Set(PROJECTS.flatMap((project) => project.tags.map((tag) => tag.name))),
 ).sort();
 ---
 
@@ -453,7 +453,7 @@ const allTags = Array.from(
               </footer>
             </div>
           </article>
-        )
+        ),
       )
     }
   </div>
@@ -695,7 +695,7 @@ const allTags = Array.from(
 <script>
   document.addEventListener("astro:page-load", () => {
     const scrollContainer = document.querySelector(
-      ".horizontal-scroll-wrapper"
+      ".horizontal-scroll-wrapper",
     ) as HTMLElement;
     const progressBar = document.getElementById("scroll-progress-bar");
 
